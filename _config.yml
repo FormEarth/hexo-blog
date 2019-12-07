@@ -22,13 +22,14 @@ pretty_urls:
 
 # Directory
 source_dir: source
-public_dir: public
+public_dir: D:\Devtools\Apache Software Foundation\Tomcat 8.5\webapps\blog
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+#这个目录是针对tomcat的404的配置
+skip_render: WEB-INF/*
 
 # Writing
 new_post_name: :title.md # File name of new posts

@@ -217,7 +217,7 @@ valine:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/wallhaven-vg29vl.png
+  banner_img: /blog/img/wallhaven-vg29vl.png
   banner_img_height: 80  # available: 0 - 100
 
 
@@ -226,7 +226,7 @@ archive:
 # Categories Page
 #---------------------------
 category:
-  banner_img: /img/wallhaven-vg29vl.png
+  banner_img: /blog/img/wallhaven-vg29vl.png
   banner_img_height: 80  # available: 0 - 100
 
 
@@ -235,7 +235,7 @@ category:
 # Tags Page
 #---------------------------
 tag:
-  banner_img: /img/wallhaven-vg29vl.png
+  banner_img: /blog/img/wallhaven-vg29vl.png
   banner_img_height: 80  # available: 0 - 100
   tagcloud: # 标签云
     min_font: 15
@@ -251,8 +251,8 @@ tag:
 #---------------------------
 about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
   md_path: ./pages/about.md  # 关于页文档的相对路径，可以按相对文档设置主题之外的路径，从而避免更新冲突
-  banner_img: /img/wallhaven-vg29vl.png
-  banner_img_height: 80  # available: 0 - 100
+  banner_img: /blog/img/wallhaven-vg29vl.png
+  banner_img_height: 50  # available: 0 - 100
   avatar: /img/myavatar.jpg # 头像
   name: 路末丶长安
   introduce: CV工程师 / Java开发工程师 # 支持 HTML
@@ -267,6 +267,6 @@ about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/a
 # 404 Page
 #---------------------------
 page404:
-  banner_img: /img/wallhaven-vg29vl.png
+  banner_img: /blog/img/wallhaven-vg29vl.png
   banner_img_height: 80  # available: 0 - 100
-  subtitle: 'Page not found'
+  subtitle: '页面不存在'
