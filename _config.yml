@@ -3,33 +3,32 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 路末丶长安
-subtitle: ''
+title: 云影
+subtitle: 半亩方塘一鉴开，天光云影共徘徊
 description: ''
 keywords:
-author: 路末丶长安
+author: Qiyuan
 language: zh-CN
 timezone: ''
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /blog/
-permalink: :title/
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: http://example.com
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing index.html from permalinks
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
-public_dir: D:\Devtools\Apache Software Foundation\Tomcat 8.5\webapps\blog
+public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-#这个目录是针对tomcat的404的配置
-skip_render: WEB-INF/*
+skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -44,10 +43,16 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: highlight.js
 highlight:
-  enable: false
   line_number: true
   auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
   tab_replace: ''
 
 # Home page setting
@@ -74,8 +79,8 @@ meta_generator: true
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -94,6 +99,6 @@ ignore:
 theme: fluid
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
