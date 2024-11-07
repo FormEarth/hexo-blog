@@ -1,11 +1,9 @@
 ---
 title: Java中Stream的使用
 date: 2019-12-05 23:34:42
-index_img: /blog/img/wallhaven-r729ej.jpg
-banner_img: /blog/img/wallhaven-r729ej.jpg
 tags:
 - Java
-- Lambda表达式
+- Lambda
 ---
 JDK1.8中进一步加强了lambda表达式，并提出一个集合流的抽象工具stream，在Stream接口里是这么描述的 
 > A sequence of elements supporting sequential and parallel aggregate operations.   
@@ -14,7 +12,7 @@ JDK1.8中进一步加强了lambda表达式，并提出一个集合流的抽象�
 流是一个抽象的概念，我们只能基于一个集合（Collection）或数组生成流，之后我们可以进行遍历、过滤、排序、搜集等中间操作，听起来像是Iterator？操作流并不会改变源数据（⚠但是在调用对象内部方法时还是会改变该对象，不建议在流中这样做），并且操作是惰性的，只有在最后执行终止操作时一系列的中间操作才真正执行并输出最终结果。操作stream有以下三个步骤：
 
 ---
-### 创建stream
+## 创建stream
 
 流需要数组或集合来创建
 ```java
@@ -26,7 +24,7 @@ Stream<Student> stream1 = students.parallelStream();//并行流
 String[] strings = {"a","b","c"};
 Stream<String> stream2 = Stream.of(strings);
 ```
-### 操作stream
+## 操作stream
 
 这里只列举下常规的操作😃
 - 排序（sorted）：可以对实现了Comparable的对象直接排序，也可以自定义比较器Comparator来排序
@@ -58,7 +56,7 @@ List<String> stringList = students.stream().map(Student -> Student.getName().toL
 - distinct（去重）
 - limit（限定前n个数据）
 - skip（限定跳过前n个数据）
-### 终止stream
+## 终止stream
 上面的例子都用了collect来终止stream，因为如果我们不调用collect就无法把结果转化为list，所有的中间操作返回的都是抽象的Stream。实际上还有其它很多终止方法，这里也列举些比较常见的😁
 - 汇聚（collect），这个后续可以展开来说
 ```java

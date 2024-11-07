@@ -4,8 +4,8 @@ date: 2019-12-04 21:53:15
 index_img: https://i.loli.net/2019/12/04/BfmYrzd4xu1SK6h.jpg
 banner_img: https://i.loli.net/2019/12/04/BfmYrzd4xu1SK6h.jpg
 tags:
-- Linux 
-- mongoDB
+- CentOS 
+- MongoDB
 ---
 ## 下载
 去mongoDB[官网](https://www.mongodb.com/download-center/community)，选择对应的版本，RHEL是redhat的linux发行版本，虽然不知道6.0和7.0有什么区别。这里选了gtz![我选择的版本](https://img-blog.csdnimg.cn/20191113114451281.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1RpbWVMZW5ndGhGb3JtYXQ=,size_16,color_FFFFFF,t_70)
