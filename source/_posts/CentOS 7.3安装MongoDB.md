@@ -1,14 +1,14 @@
 ﻿---
 title: CentOS  7.3安装MongoDB
 date: 2019-12-04 21:53:15
-index_img: https://i.loli.net/2019/12/04/BfmYrzd4xu1SK6h.jpg
-banner_img: https://i.loli.net/2019/12/04/BfmYrzd4xu1SK6h.jpg
+index_img: /img/1/mongodb-950x324.png
+banner_img: /img/1/mongodb-950x324.png
 tags:
 - CentOS 
 - MongoDB
 ---
 ## 下载
-去mongoDB[官网](https://www.mongodb.com/download-center/community)，选择对应的版本，RHEL是redhat的linux发行版本，虽然不知道6.0和7.0有什么区别。这里选了gtz![我选择的版本](https://img-blog.csdnimg.cn/20191113114451281.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1RpbWVMZW5ndGhGb3JtYXQ=,size_16,color_FFFFFF,t_70)
+去mongoDB[官网](https://www.mongodb.com/download-center/community)，选择对应的版本，RHEL是redhat的linux发行版本，虽然不知道6.0和7.0有什么区别。这里选了gtz![我选择的版本](/img/1/20191113114451281.png)
 ## 安装
 下载完成后将 `mongodb-linux-x86_64-rhel70-4.2.1.tgz`上传至服务器指定目录，
 然后解压 `tar -zxvf  mongodb-linux-x86_64-rhel70-4.2.1.tgz`
@@ -24,7 +24,7 @@ tags:
 查看是否已经加入 `echo $PATH`
 
 OK，安装完成，我们用 `mongod` 试图去启动服务，报错了
-![启动报错](https://img-blog.csdnimg.cn/20191113122425930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1RpbWVMZW5ndGhGb3JtYXQ=,size_16,color_FFFFFF,t_70)
+![启动报错](/img/1/20191113122425930.png)
 报的是`/data/db`没有找到，原来启动是需要参数的，这个路径是它默认的数据保存的地方，但它不会自己创建。我们可以自己创建这个目录，但是我们可以指定自定义的目录。
 mongoDB启动时可以指定很多参数，也可以指定一个配置了指定参数的配置文件，以下是两种方式的命令，这些参数可以配置mongoDB的工作方式，参考文章[这里](https://www.cnblogs.com/seasonzone/p/9359425.html)
 
@@ -52,7 +52,7 @@ bind_ip = 0.0.0.0
 ```
 OK,再启动  `mongod --config /usr/tools/mongodbServer/mongo_server.conf`
 tip:关闭mongoDB `mongod  --shutdown --config /usr/tools/mongodbServer/mongo_server.conf`
-![成功](https://img-blog.csdnimg.cn/20191113125208644.png)
+![成功](/img/1/20191113125208644.png)
 看起来是成功了
 ## 创建账号
 因为默认是本地访问，无需验证，使用命令 `mongo` 进入 mongoDB数据库
@@ -82,10 +82,10 @@ db.createUser( { user: "application_user", pwd: "<你的密码>", roles: [ { rol
 有了用户之后我们就可以开启验证，允许远程连接了,关闭mongoDB，修改 mongo_server.conf
 取消 `auth = true`，保存，重启mongoDB。
 进入mongoDB，可以进来，但是操作什么的都没有反应，甚至报错了
-![报错了](https://img-blog.csdnimg.cn/20191113135505875.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1RpbWVMZW5ndGhGb3JtYXQ=,size_16,color_FFFFFF,t_70)
+![报错了](/img/1/20191113135505875.png)
 该命令需要认证，OK，认证一下 `db.auth("application_user","<你的密码>")`
-接下来我们访问下我们的域名＋27017，出现下面这个就说明能够访问了，需要开放27017端口![访问](https://img-blog.csdnimg.cn/20191113140303209.png)
-使用studion 3T连接![成功，ok](https://img-blog.csdnimg.cn/20191113144510810.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1RpbWVMZW5ndGhGb3JtYXQ=,size_16,color_FFFFFF,t_70)
+接下来我们访问下我们的域名＋27017，出现下面这个就说明能够访问了，需要开放27017端口![访问](/img/1/20191113140303209.png)
+使用studion 3T连接![成功，ok](/img/1/20191113144510810.png)
 
 
 
