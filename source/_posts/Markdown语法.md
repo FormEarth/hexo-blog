@@ -135,27 +135,7 @@ public class HelloWorld {
 
 ### 2.3 数学公式
 
-
-行内公式使用方法，比如这个化学公式：$\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}$
-
-块公式使用方法如下：
-
-$$H(D_2) = -\left(\frac{2}{4}\log_2 \frac{2}{4} + \frac{2}{4}\log_2 \frac{2}{4}\right) = 1$$
-
-矩阵：
-
-$$
-  \begin{pmatrix}
-  1 & a_1 & a_1^2 & \cdots & a_1^n \\
-  1 & a_2 & a_2^2 & \cdots & a_2^n \\
-  \vdots & \vdots & \vdots & \ddots & \vdots \\
-  1 & a_m & a_m^2 & \cdots & a_m^n \\
-  \end{pmatrix}
-$$
-
-公式由于微信不支持，目前的解决方案是转成 svg 放到微信中，无需调整，矢量不失真。
-
-目前测试如果公式量过大，在 Chrome 下会存在粘贴后无响应，但是在 Firefox 中始终能够成功。
+暂不支持
 
 ### 2.4 TOC
 
@@ -177,3 +157,12 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 
 <span style="display:block;text-align:right;color:orangered;">橙色居右</span>
 <span style="display:block;text-align:center;color:orangered;">橙色居中</span>
+
+标签
+
+<p class="label label-primary">标签</p>
+
+
+便签
+
+<p class="note note-primary">便签</p>

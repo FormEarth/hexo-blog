@@ -7,13 +7,13 @@ title: 云影
 subtitle: 半亩方塘一鉴开，天光云影共徘徊
 description: ''
 keywords:
-author: '雨时'
+author: 'Qiyuan'
 language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://qiyuan2022.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -28,7 +28,8 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
+  - "h5/**"
 
 # Writing
 new_post_name: :title.md # File name of new posts
